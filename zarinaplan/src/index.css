@@ -1,3 +1,6 @@
+html {
+  min-height: 100%;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +8,33 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(/img/background.jpg) no-repeat;
+  background-size: 100%;
+  background-color: #D4D9DD;
+  background-position: top;
+  min-height: 100%;
+}
+
+form {
+  padding: 2em !important;
+  margin-top: 10em;
+  border-radius: 5px;
+  background: rgba(255,255,255,.75) !important;
+}
+
+form button, form h5 {
+  margin: 2em 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]),
+input[type=email]:not(.browser-default):focus:not([readonly]),
+input[type=password]:not(.browser-default):focus:not([readonly]),
+textarea.materialize-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #F28491;
+  box-shadow: 0 1px 0 0 #F28491;
 }
